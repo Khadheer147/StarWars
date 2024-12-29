@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Buff Central - Star Wars Fan Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('StarWars.png') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Featured Movies Section */
+        .featured {
+            padding: 4rem 2rem;
+        }
+
+        .featured h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .movie-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 1.5rem;
+        }
+
+        .movie-info h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .movie-info p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .about h2,
+            .featured h2 {
+                font-size: 2rem;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Star Wars</h1>
+        <p>A Galaxy Far, Far Away...</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Star Wars</h2>
+        <p>Star Wars is an epic space opera franchise created by George Lucas. Set "a long time ago in a galaxy far, far away," the saga has captured the imagination of millions worldwide with its compelling story of good versus evil, groundbreaking special effects, and rich mythology.</p>
+    </section>
+
+    <!-- Featured Movies Section -->
+    <section class="featured">
+        <h2>Featured Movies</h2>
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="Star.png" alt="A New Hope">
+                <div class="movie-info">
+                    <h3>Episode IV: A New Hope</h3>
+                    <p>The movie that started it all. Follow Luke Skywalker as he joins the Rebellion in their fight against the evil Galactic Empire.</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="Star.png" alt="The Empire Strikes Back">
+                <div class="movie-info">
+                    <h3>Episode V: The Empire Strikes Back</h3>
+                    <p>The dark second chapter of the original trilogy features one of the most iconic plot twists in cinema history.</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="Star.png" alt="Return of the Jedi">
+                <div class="movie-info">
+                    <h3>Episode VI: Return of the Jedi</h3>
+                    <p>The epic conclusion to the original trilogy sees Luke face his destiny and confront the Emperor himself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
